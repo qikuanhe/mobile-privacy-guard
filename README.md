@@ -1,5 +1,7 @@
 # 大尾巴隐私守护 · Daweiba Privacy Guard
 
+> **面向中文用户的安卓隐私审计工具**，文档以中文为主 · [English summary ↓](#english)
+
 <p align="center">
   <img src="docs/icon.png" width="96" alt="icon">
 </p>
