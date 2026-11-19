@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大尾巴隐私守护 · 隐私政策</title>
+<style>
+  :root{
+    --bg:#f7f8f7; --card:#fff; --text:#1b1c1b; --muted:#5f6b63;
+    --accent:#1B5E20; --accent-soft:#e8f5e9; --line:#e2e6e3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121412; --card:#1a1d1a; --text:#e8ebe8; --muted:#9aa89e;
+      --accent:#7cc47f; --accent-soft:#1e2a1f; --line:#2b312c;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 20px 64px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75; font-size:16px;
+  }
+  .wrap{max-width:760px; margin:0 auto}
+  header{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:28px 28px 24px; margin-bottom:20px;
+  }
+  h1{margin:0 0 6px; font-size:26px; letter-spacing:-.3px}
+  .sub{color:var(--muted); font-size:14px; margin:0}
+  .badge{
+    display:inline-block; margin-top:14px; padding:6px 12px; border-radius:999px;
+    background:var(--accent-soft); color:var(--accent); font-size:13px; font-weight:600;
+  }
+  section{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:24px 28px; margin-bottom:16px;
+  }
+  h2{font-size:18px; margin:0 0 12px; padding-left:12px; border-left:3px solid var(--accent)}
+  h3{font-size:15px; margin:20px 0 8px; color:var(--accent)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0; padding-left:22px}
+  li{margin:6px 0}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14px; display:block; overflow-x:auto}
+  th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top}
+  th{background:var(--accent-soft); font-weight:600; white-space:nowrap}
+  code{
+    background:var(--accent-soft); color:var(--accent); padding:1px 6px;
+    border-radius:5px; font-size:13px; font-family:ui-monospace,Menlo,Consolas,monospace;
+  }
+  strong{font-weight:600}
+  .hi{
+    border-left:3px solid var(--accent); background:var(--accent-soft);
+    padding:14px 18px; border-radius:0 10px 10px 0; margin:14px 0;
+  }
+  .hi p{margin:0}
+  footer{text-align:center; color:var(--muted); font-size:13px; margin-top:28px}
+  .en{border-top:1px dashed var(--line); margin-top:20px; padding-top:16px}
+  details summary{cursor:pointer; font-weight:600; color:var(--accent); padding:6px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>大尾巴隐私守护 · 隐私政策</h1>
+  <p class="sub">
+    应用名：大尾巴隐私守护（Daweiba Privacy Guard）｜包名：<code>com.daweiba.privacyguard</code><br>
+    开发者：大尾巴（个人开发者）｜最后更新：2026 年 11 月 19 日｜适用版本：0.7.1 及以后
+  </p>
+  <span class="badge">默认不联网 · 不收集 · 不上传</span>
+</header>
+
+<section>
+  <h2>一句话说明</h2>
+  <div class="hi"><p><strong>这个应用默认不联网、不注册账号、不上传任何数据。所有分析都在你的手机本地完成。</strong></p></div>
+  <p>如果你只想看结论，到这里就够了。以下是完整说明。</p>
+</section>
+
+<section>
+  <h2>1. 我们不收集任何数据</h2>
+  <ul>
+    <li>不要求你注册或登录</li>
+    <li>不收集你的姓名、手机号、邮箱、位置、通讯录、照片</li>
+    <li>不集成任何第三方统计、广告或崩溃上报 SDK</li>
+    <li>不含用户画像、埋点或行为分析</li>
+    <li>不向任何服务器发送数据——<strong>因为本应用根本没有服务器</strong></li>
+  </ul>
+</section>
+
+<section>
+  <h2>2. 应用在本地读取哪些信息</h2>
+  <p>以下信息<strong>只在你手机内部处理</strong>，不会离开设备：</p>
+  <table>
+    <thead><tr><th>读取的内容</th><th>用途</th><th>是否上传</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>已安装应用列表（包名、是否为系统应用、签名摘要、申请的权限）</td>
+        <td>判断哪些应用可能把你的数据传到别处，并给出卸载 / 停用建议</td>
+        <td><strong>否</strong></td>
+      </tr>
+      <tr>
+        <td>应用的 DNS 查询记录（仅在开启「泄露监控」时）</td>
+        <td>判断某个应用是否正在连接已知的数据上报域名</td>
+        <td><strong>否</strong>，仅存在内存中</td>
+      </tr>
+      <tr>
+        <td>已安装应用安装包（APK）内的字符串（仅在你手动触发「深度扫描」时）</td>
+        <td>查找应用里内置的上报域名与遥测关键词，作为「包内线索」展示</td>
+        <td><strong>否</strong>，只读，仅存在内存中</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>读取已安装应用列表需要 <code>QUERY_ALL_PACKAGES</code> 权限。这是本应用<strong>核心功能所必需</strong>——如果不扫描全部应用，就无法告诉你哪个应用在偷偷上报数据。</p>
+</section>
+
+<section>
+  <h2>3. 网络行为说明（重要）</h2>
+  <p>本应用<strong>默认不连接</strong>任何自有或第三方服务器。以下两项网络行为必须如实告知：第一项在你开启「泄露监控」后自动发生；第二项<strong>只有在你主动填写地址并点击检查时</strong>才会发生。「可疑外联判定」与「深度扫描」都是纯本地分析，不产生任何网络请求。</p>
+  <p><strong>① 当你手动开启「泄露监控」后</strong>，应用会建立一个本地 VPN 连接（Android <code>VpnService</code>），其作用是：</p>
+  <ol>
+    <li>在本机拦截设备内<strong>其他应用</strong>发出的 DNS 查询；</li>
+    <li>把查询转发到<strong>你当前 Wi-Fi / 移动网络自动获取的 DNS 服务器</strong>（例如运营商 DNS）；</li>
+    <li>在本地比对查询的域名是否命中已知上报域名库，命中则记录一条事件。</li>
+  </ol>
+  <p>之所以必须转发，是因为 Android 的 VPN 机制要求：一旦接管 DNS，就必须自己把查询送出去，否则手机上所有应用都会无法上网。</p>
+  <p>本应用在这一过程中：</p>
+  <ul>
+    <li>不修改 DNS 查询的内容</li>
+    <li>不记录你访问了哪些网站</li>
+    <li>不把查询记录写入文件或上传</li>
+    <li>不使用任何远程 DNS 服务</li>
+  </ul>
+  <p><strong>你随时可以关闭泄露监控</strong>，关闭后 VPN 立即断开，网络行为与未安装本应用时完全一致。</p>
+
+  <h3>3.1 可选增强：Shizuku 与「一键停用」</h3>
+  <p>v0.6.0 起，本应用可选地通过开源工具 <a href="https://shizuku.rikka.app/">Shizuku</a> 直接停用 / 恢复预装应用。这一能力：</p>
+  <ul>
+    <li><strong>默认关闭</strong>：只有在你主动安装 Shizuku、启动其服务并在结论页点过「授权」后才生效</li>
+    <li>属于<strong>设备本地的进程间通信</strong>，不涉及任何网络连接，不向 Shizuku 或我们发送任何数据</li>
+    <li>只执行两条固定命令：<code>pm disable-user --user 0 &lt;包名&gt;</code> 与 <code>pm enable --user 0 &lt;包名&gt;</code>；包名经字符白名单校验，不接受任意输入</li>
+    <li>系统核心组件、桌面启动器、本应用自身、Shizuku 自身均在禁止停用名单内</li>
+    <li>停用前弹出二次确认，并再次显示该应用的影响说明</li>
+  </ul>
+  <p>即使不安装 Shizuku，全部功能照常使用，结论页按钮只是退回「跳转到系统设置页手动停用」。</p>
+  <div class="hi"><p>本应用打包了 Shizuku 的开源客户端库用于本地通信，其中不含统计、广告或联网代码，也不读取你的数据。</p></div>
+
+  <h3>3.2 可选：手动更新域名知识库（v0.6.1 起）</h3>
+  <p>首页底部提供「知识库更新」入口。<strong>默认完全不联网</strong>——更新地址为空，应用不会自行发起任何网络请求。</p>
+  <p>只有当你<strong>主动填入一个 <code>https://</code> 地址并点「检查更新」</strong>时，才会发生一次网络请求：</p>
+  <ul>
+    <li>只向<strong>你填写的那个地址</strong>发起一次 HTTPS GET，下载一份域名清单（JSON）</li>
+    <li>请求中<strong>不携带</strong>设备信息、已安装应用列表、DNS 记录或任何标识符</li>
+    <li>不解析、不执行下载内容里的代码；只读取 <code>domains</code> 数组中的域名字符串，并校验域名格式</li>
+    <li>校验通过的条目合并进本地知识库，仅用于泄露监控比对；可随时点「清除自定义」恢复内置版本</li>
+    <li>不向任何自有或第三方服务器发送任何数据，不含统计 / 广告 / 崩溃上报</li>
+  </ul>
+  <p>如果你不填地址、不点检查，本应用的网络行为与 0.6.0 完全一致。</p>
+  <div class="hi"><p>该地址由你自己提供，其内容可信度由你自行判断；应用<strong>不预设、不内置</strong>任何更新服务器。</p></div>
+</section>
+
+<section>
+  <h2>4. 数据存储与保留</h2>
+  <table>
+    <thead><tr><th>数据</th><th>存储位置</th><th>保留时间</th></tr></thead>
+    <tbody>
+      <tr><td>「域名拦截」开关状态</td><td>手机本地（SharedPreferences，仅一个布尔值）</td><td>直到卸载应用</td></tr>
+      <tr><td>泄露事件日志</td><td><strong>仅内存</strong>，最多 500 条</td><td>关闭应用即清空</td></tr>
+      <tr><td>扫描结果</td><td><strong>仅内存</strong></td><td>关闭应用即清空</td></tr>
+      <tr><td>由本应用停用过的包名列表（仅启用可选增强后）</td><td>手机本地（SharedPreferences）</td><td>直到点「恢复」或卸载应用</td></tr>
+      <tr><td>自定义域名条目与更新地址（仅在你主动更新后）</td><td>手机本地（SharedPreferences）</td><td>直到点「清除自定义」或卸载应用</td></tr>
+      <tr><td>系统版本指纹与上次体检时间（OTA 复查提醒）</td><td>手机本地（SharedPreferences）</td><td>直到卸载应用</td></tr>
+      <tr><td>深度扫描得到的包内线索</td><td><strong>仅内存</strong></td><td>关闭应用即清空</td></tr>
+    </tbody>
+  </table>
+  <p><strong>除上述几个本地开关与清单外，没有任何数据被写入外部存储、云盘或服务器。卸载应用即彻底删除全部数据。</strong></p>
+</section>
+
+<section>
+  <h2>5. 第三方共享</h2>
+  <p><strong>没有。</strong>本应用不与任何第三方共享、出售或转让任何信息。</p>
+</section>
+
+<section>
+  <h2>6. 权限说明</h2>
+  <table>
+    <thead><tr><th>权限</th><th>为什么需要</th></tr></thead>
+    <tbody>
+      <tr><td><code>QUERY_ALL_PACKAGES</code></td><td>扫描全部已安装应用，这是核心功能</td></tr>
+      <tr><td><code>INTERNET</code></td><td>① 把 DNS 查询转发给你所在网络的 DNS 服务器（见第 3 节）；② 仅在你主动发起时执行知识库更新请求（见 3.2）</td></tr>
+      <tr><td><code>FOREGROUND_SERVICE</code><br><code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>让泄露监控在后台持续运行，并在通知栏显示运行状态</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>显示泄露监控的运行通知（Android 13+）</td></tr>
+      <tr><td><code>BIND_VPN_SERVICE</code></td><td>建立本地 DNS 监控通道，需由你手动授权</td></tr>
+      <tr><td><code>moe.shizuku.manager.permission.API_V23</code></td><td>可选：向 Shizuku 申请本地 shell 身份，用于一键停用 / 恢复；不授权则该功能不可用</td></tr>
+    </tbody>
+  </table>
+  <p>本应用<strong>不申请</strong>：位置、通讯录、短信、通话记录、相机、麦克风、存储读写、无障碍服务。</p>
+</section>
+
+<section>
+  <h2>7. 儿童隐私</h2>
+  <p>本应用不面向 13 岁以下儿童，也不会有意收集儿童信息（事实上不收集任何人的信息）。</p>
+</section>
+
+<section>
+  <h2>8. 你的权利</h2>
+  <p>由于本应用不保存任何可识别你身份的数据，你无需行使「查询 / 更正 / 导出」权利。<strong>卸载应用即等于删除全部数据。</strong></p>
+  <p>如果想停止一切后台行为：关闭「泄露监控」开关，或在系统设置中撤销本应用的 VPN 授权。若曾填写过更新地址，可在「知识库更新」中点「清除自定义」。</p>
+</section>
+
+<section>
+  <h2>9. 政策变更</h2>
+  <p>本政策如有修改，会更新本文档顶部的「最后更新」日期，并在应用新版本说明中注明。若涉及数据处理的实质性变化，会在应用内提示。</p>
+</section>
+
+<section>
+  <h2>10. 联系方式</h2>
+  <p>如对本政策有疑问，请联系：<strong>qikuanhe@163.com</strong></p>
+
+  <div class="en">
+    <details>
+      <summary>English version — Privacy Policy</summary>
+      <h3>Summary</h3>
+      <p>By default this app makes no network connections, has no accounts, and uploads nothing. All analysis happens on your device.</p>
+
+      <h3>1. Data We Collect</h3>
+      <p>None. No account, no cloud service, no analytics SDK, no advertising SDK, no crash reporting SDK.</p>
+
+      <h3>2. Data Read Locally on Your Device</h3>
+      <table>
+        <thead><tr><th>Data</th><th>Purpose</th><th>Uploaded?</th></tr></thead>
+        <tbody>
+          <tr><td>Installed app list (package name, system flag, signature digest, requested permissions)</td><td>Identify apps that may leak your data and suggest actions</td><td><strong>No</strong></td></tr>
+          <tr><td>DNS queries per app (only while Leak Monitor is on)</td><td>Detect connections to known telemetry domains</td><td><strong>No</strong>, memory only</td></tr>
+          <tr><td>Strings inside installed APKs (only when you manually run Deep scan)</td><td>Find embedded reporting endpoints as in-package clues</td><td><strong>No</strong>, read-only, memory only</td></tr>
+        </tbody>
+      </table>
+
+      <h3>3. Network Behavior</h3>
+      <p>By default the app does <strong>not</strong> connect to any server operated by us or any third party. Two behaviors are disclosed below: the first happens automatically once you enable Leak Monitor; the second happens <strong>only when you explicitly enter an address and tap Check for updates</strong>. Heuristic suspicious-outbound detection and Deep scan are purely local and make no network requests.</p>
+      <p><strong>1) Leak Monitor.</strong> When manually enabled, the app establishes a local VPN (<code>VpnService</code>) that captures DNS queries sent by other apps, forwards them to the DNS server your current network provides, and compares queried domains against a built-in telemetry-domain list locally.</p>
+      <p>Forwarding is mandatory: Android requires a VPN that takes over DNS to also deliver the queries, otherwise no app on your device could resolve names. The app does not modify queries, log browsing history, write query logs to disk, or use any remote DNS service. Disabling Leak Monitor immediately tears down the VPN.</p>
+
+      <h3>3.1 Optional: Shizuku and one-tap disable</h3>
+      <p>Since 0.6.0 the app can optionally use the open-source tool <a href="https://shizuku.rikka.app/">Shizuku</a> to disable / re-enable preinstalled apps.</p>
+      <ul>
+        <li><strong>Off by default</strong>: only active after you install Shizuku, start its service, and grant permission once from the report page</li>
+        <li>Purely <strong>local inter-process communication</strong> — no network involved, nothing sent to Shizuku or to us</li>
+        <li>Only two fixed commands: <code>pm disable-user --user 0 &lt;pkg&gt;</code> and <code>pm enable --user 0 &lt;pkg&gt;</code>. Package names are validated against a character allowlist; no arbitrary input is accepted</li>
+        <li>System core components, the launcher, this app itself, and Shizuku itself are on a do-not-disable list</li>
+        <li>A confirmation dialog with the app's impact note appears before every disable</li>
+      </ul>
+      <p>Without Shizuku, every feature still works — the button simply falls back to opening the system app settings page.</p>
+
+      <h3>3.2 Optional: manual knowledge-base update (since 0.6.1)</h3>
+      <p>A "Knowledge base update" entry is available at the bottom of the home screen. <strong>It is offline by default</strong> — the update URL is empty and the app never initiates a request on its own.</p>
+      <p>Only when you <strong>explicitly enter an <code>https://</code> URL and tap Check for updates</strong> does one request occur:</p>
+      <ul>
+        <li>A single HTTPS GET to <strong>the address you entered</strong>, downloading a JSON list of domains</li>
+        <li>The request carries <strong>no</strong> device information, installed-app list, DNS records, or identifiers</li>
+        <li>Downloaded content is never executed; only domain strings in the <code>domains</code> array are read and validated</li>
+        <li>Valid entries are merged into the local knowledge base for leak monitoring only; "Clear custom" restores the built-in list at any time</li>
+        <li>Nothing is sent to any server of ours or any third party; no analytics, ads, or crash reporting</li>
+      </ul>
+      <p>If you never enter an address or tap the button, network behavior is identical to 0.6.0.</p>
+      <p>You supply the URL yourself and are responsible for trusting its contents; the app ships with <strong>no</strong> built-in update server.</p>
+
+      <h3>4. Storage and Retention</h3>
+      <table>
+        <thead><tr><th>Data</th><th>Location</th><th>Retention</th></tr></thead>
+        <tbody>
+          <tr><td>Domain-blocking toggle</td><td>Device local (one boolean)</td><td>Until uninstall</td></tr>
+          <tr><td>Leak event log</td><td><strong>Memory only</strong>, max 500 entries</td><td>Cleared when app closes</td></tr>
+          <tr><td>Scan results</td><td><strong>Memory only</strong></td><td>Cleared when app closes</td></tr>
+          <tr><td>Packages disabled by this app (optional enhancement only)</td><td>Device local (SharedPreferences)</td><td>Until you tap Restore or uninstall</td></tr>
+          <tr><td>Custom domain entries and update URL (only after a manual update)</td><td>Device local (SharedPreferences)</td><td>Until you tap Clear custom or uninstall</td></tr>
+          <tr><td>System build fingerprint and last scan time (OTA reminder)</td><td>Device local (SharedPreferences)</td><td>Until uninstall</td></tr>
+          <tr><td>In-package clues from Deep scan</td><td><strong>Memory only</strong></td><td>Cleared when app closes</td></tr>
+        </tbody>
+      </table>
+      <p>No data is written to external storage, cloud, or any server. Uninstalling the app deletes everything.</p>
+
+      <h3>5. Third-Party Sharing</h3>
+      <p>None. We do not share, sell, or transfer any information.</p>
+
+      <h3>6. Permissions</h3>
+      <table>
+        <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><code>QUERY_ALL_PACKAGES</code></td><td>Scanning all installed apps is the app's core function</td></tr>
+          <tr><td><code>INTERNET</code></td><td>① Forwarding DNS queries to your network's DNS server; ② only when you explicitly start a knowledge-base update (see 3.2)</td></tr>
+          <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep Leak Monitor running with a visible notification</td></tr>
+          <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the Leak Monitor status notification</td></tr>
+          <tr><td><code>BIND_VPN_SERVICE</code></td><td>Establish the local DNS monitoring tunnel, granted by you</td></tr>
+          <tr><td><code>moe.shizuku.manager.permission.API_V23</code></td><td>Optional: request a local shell identity from Shizuku for one-tap disable / restore; unused without your grant</td></tr>
+        </tbody>
+      </table>
+      <p>The app does <strong>not</strong> request: location, contacts, SMS, call logs, camera, microphone, storage, or accessibility service.</p>
+
+      <h3>7. Children's Privacy</h3>
+      <p>Not directed to children under 13. We collect no information from anyone.</p>
+
+      <h3>8. Your Rights</h3>
+      <p>Since no personally identifiable data is stored, there is nothing to query, correct, or export. Uninstalling the app deletes all data. To stop all background activity, turn off Leak Monitor or revoke the VPN grant; if you ever entered an update URL, tap "Clear custom".</p>
+
+      <h3>9. Changes</h3>
+      <p>Material changes will update the "Last updated" date above and be noted in the release notes.</p>
+
+      <h3>10. Contact</h3>
+      <p>Email: <strong>qikuanhe@163.com</strong></p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  大尾巴隐私守护 · 本文档可自由转载，无需授权
+</footer>
+
+</div>
+</body>
+</html>

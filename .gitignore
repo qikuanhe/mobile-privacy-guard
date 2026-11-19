@@ -1,0 +1,20 @@
+# 构建产物
+/build/
+*.apk
+*.aab
+*.idsig
+*.apks
+
+# 签名文件 —— 绝不提交
+.keystore/
+*.keystore
+*.jks
+
+# 系统垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时文件
+*.log
+*.tmp
